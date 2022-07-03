@@ -1,3 +1,4 @@
+import 'package:bmi/constants/constant.dart';
 import 'package:bmi/views/bmi_data_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        appBarTheme: AppBarTheme(backgroundColor: Color(0xff0a0e21)),
+        primaryColor: primaryColor,
+        appBarTheme: AppBarTheme(backgroundColor: primaryColor),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
