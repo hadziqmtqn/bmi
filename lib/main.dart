@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: primaryColor,
-        appBarTheme: AppBarTheme(backgroundColor: primaryColor),
+        appBarTheme: const AppBarTheme(backgroundColor: primaryColor),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: BmiDataScreen(),
+      home: const BmiDataScreen(),
     );
   }
 }
