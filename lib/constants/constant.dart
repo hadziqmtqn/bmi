@@ -6,3 +6,12 @@ TextStyle? labelTextStyle =
         );
 TextStyle numberTextStyle =
     TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.white);
+
+String underweightSevere = "Underweight (Severe thinnese)";
+String underweightModerate = "Underweight (Moderate thinnese)";
+String underweightMild = "Underweight (Mild thinnese)";
+String normal = "Normal";
+String overweight = "Overweight";
+String obeseI = "Obese Class I";
+String obeseII = "Obese Class II";
+String obeseIII = "Obese Class III";
