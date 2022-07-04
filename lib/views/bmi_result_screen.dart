@@ -10,19 +10,19 @@ class BmiResultScreen extends StatelessWidget {
     String category = "";
     if (bmiValue < 16.0) {
       category = underweightSevere;
-    } else if (bmiValue >= 16.0 && bmiValue < 17) {
+    } else if (bmiValue < 17) {
       category = underweightModerate;
-    } else if (bmiValue >= 17.0 && bmiValue < 18.5) {
+    } else if (bmiValue < 18.5) {
       category = underweightMild;
-    } else if (bmiValue >= 18.5 && bmiValue < 25) {
+    } else if (bmiValue < 25) {
       category = normal;
-    } else if (bmiValue >= 25 && bmiValue < 30) {
+    } else if (bmiValue < 30) {
       category = overweight;
-    } else if (bmiValue >= 30 && bmiValue < 35) {
+    } else if (bmiValue < 35) {
       category = obeseI;
-    } else if (bmiValue >= 35 && bmiValue < 40) {
+    } else if (bmiValue < 40) {
       category = obeseII;
-    } else if (bmiValue > 40) {
+    } else if (bmiValue >= 40) {
       category = obeseIII;
     }
 
