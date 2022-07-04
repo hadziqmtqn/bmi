@@ -224,7 +224,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                   color: Colors.white),
             )),
           ),
-        )
+        ),
       ]),
     );
   }
