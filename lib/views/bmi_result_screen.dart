@@ -6,7 +6,7 @@ class BmiResultScreen extends StatelessWidget {
   const BmiResultScreen({Key? key, required this.bmi}) : super(key: key);
   final double bmi;
 
-  determineBmiCatergory(double bmiValue) {
+  String determineBmiCatergory(double bmiValue) {
     String category = "";
     if (bmiValue < 16.0) {
       category = underweightSevere;
@@ -29,8 +29,48 @@ class BmiResultScreen extends StatelessWidget {
     return category;
   }
 
+  String getHealRiskDescription(String categoryName) {
+    String desc = "";
+    switch (categoryName) {
+      case underweightSevere:
+        desc = "Possible nutritional deficiency and osteoporosis";
+        break;
+      case underweightModerate:
+        desc = "Possible nutritional deficiency and osteoporosis";
+        break;
+      case underweightMild:
+        desc = "Possible nutritional deficiency and osteoporosis";
+        break;
+      case normal:
+        desc = "Low risk (healthy range)";
+        break;
+      case overweight:
+        desc =
+            "Moderate risk of developing heart disease, high blood pressure, stroke, deabetes mellituse";
+        break;
+      case obeseI:
+        desc =
+            "Moderate risk of developing heart disease, high blood pressure, stroke, deabetes mellituse. Metabolic Syndrome";
+        break;
+      case obeseII:
+        desc =
+            "Moderate risk of developing heart disease, high blood pressure, stroke, deabetes mellituse. Metabolic Syndrome";
+        break;
+      case obeseIII:
+        desc =
+            "Moderate risk of developing heart disease, high blood pressure, stroke, deabetes mellituse. Metabolic Syndrome";
+        break;
+      default:
+    }
+
+    return desc;
+  }
+
   @override
   Widget build(BuildContext context) {
+    final bmiCategory = determineBmiCatergory(bmi);
+    final bmiDesc = getHealRiskDescription(bmiCategory);
+
     return Scaffold(
       backgroundColor: Color(0xff0A0E21),
       appBar: AppBar(
@@ -54,12 +94,13 @@ class BmiResultScreen extends StatelessWidget {
           flex: 5,
           child: BmiCard(
             child: Container(
+              width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      determineBmiCatergory(bmi),
+                      bmiCategory,
                       style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -73,7 +114,7 @@ class BmiResultScreen extends StatelessWidget {
                           color: Colors.white),
                     ),
                     Text(
-                      "Your BMI result is quite low, you should eat more",
+                      bmiDesc,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 15,
