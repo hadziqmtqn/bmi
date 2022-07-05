@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:bmi/constants/constant.dart';
 import 'package:bmi/helpers/bmi_calculator.dart';
 import 'package:bmi/views/bmi_result_screen.dart';
@@ -64,14 +66,14 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
         },
         child: Container(
           height: 60,
-          margin: EdgeInsets.all(15),
+          margin: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             color: const Color(0xff517DF6), // warna button footer
           ),
           child: const Center(
               child: Text(
-            "Hitung BMI",
+            "Calculate",
             style: TextStyle(
                 fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white),
           )),

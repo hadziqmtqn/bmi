@@ -70,16 +70,16 @@ class BmiResultScreen extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
-        title: const Text("Hasil Hitung BMI"),
+        title: const Text("Count Result BMI"),
       ),
       body: Column(children: [
         Expanded(
           child: Container(
             child: const Center(
               child: Text(
-                "Hasil Perhitungan",
+                "Result",
                 style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: primaryColor),
               ),
@@ -127,11 +127,15 @@ class BmiResultScreen extends StatelessWidget {
             Navigator.pop(context);
           },
           child: Container(
-            height: 80,
-            color: const Color(0xff517DF6),
+            height: 60,
+            margin: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: const Color(0xff517DF6), // warna button footer
+            ),
             child: const Center(
                 child: Text(
-              "Hitung Ulang",
+              "Recalculate BMI",
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
