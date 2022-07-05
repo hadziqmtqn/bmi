@@ -82,9 +82,8 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
           ],
         ),
         Center(
-          child: BmiCard(
-            child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          child: Column(
+            children: [
               Text(
                 "HEIGHT",
                 style: labelTextStyle!.copyWith(
@@ -92,34 +91,46 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
-                    "$height",
-                    style: numberTextStyle,
+                  Expanded(
+                    child: BmiCard(
+                      child: Slider(
+                        value: height.toDouble(),
+                        min: 80,
+                        max: 200,
+                        thumbColor: Colors.red,
+                        activeColor: Colors.white,
+                        onChanged: (value) {
+                          height = value.toInt();
+                          setState(() {});
+                        },
+                      ),
+                    ),
                   ),
-                  Text(
-                    "CM",
-                    style: labelTextStyle,
+                  BmiCard(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15.0, vertical: 15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            "$height",
+                            style: labelTextStyle,
+                          ),
+                          Text(
+                            " CM",
+                            style: labelTextStyle,
+                          ),
+                        ],
+                      ),
+                    ),
                   )
                 ],
               ),
-              Slider(
-                  value: height.toDouble(),
-                  min: 80,
-                  max: 200,
-                  thumbColor: Colors.red,
-                  activeColor: Colors.white,
-                  onChanged: (value) {
-                    height = value.toInt();
-                    setState(() {});
-                  })
-            ]),
+            ],
           ),
         ),
         Container(
