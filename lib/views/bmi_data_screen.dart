@@ -144,7 +144,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                           child: Icon(
                             Icons.check_circle,
                             color: (gender == "female")
-                                ? Color(0xff517DF6)
+                                ? const Color(0xff517DF6)
                                 : Colors.white,
                           ),
                         ),
@@ -176,8 +176,8 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                           value: height.toDouble(),
                           min: 80,
                           max: 200,
-                          thumbColor: Colors.red,
-                          activeColor: Colors.white,
+                          thumbColor: const Color(0xff517DF6),
+                          activeColor: Color.fromARGB(255, 164, 99, 244),
                           onChanged: (value) {
                             height = value.toInt();
                             setState(() {});
