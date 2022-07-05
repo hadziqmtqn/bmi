@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: primaryColor,
-        appBarTheme: const AppBarTheme(backgroundColor: primaryColor),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+            iconTheme: IconThemeData(color: primaryColor),
+            titleTextStyle: TextStyle(color: primaryColor),
+            backgroundColor: Colors.white),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
