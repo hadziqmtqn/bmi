@@ -137,7 +137,7 @@ class BmiResultScreen extends StatelessWidget {
                 child: Text(
               "Recalculate BMI",
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                   color: Colors.white),
             )),
