@@ -92,8 +92,9 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     setState(() {});
                   },
                   child: BmiCard(
-                    borderColor:
-                        (gender == "male") ? Color(0xff517DF6) : Colors.white,
+                    borderColor: (gender == "male")
+                        ? const Color(0xff517DF6)
+                        : Colors.white,
                     child: Stack(
                       children: [
                         const Center(
@@ -111,7 +112,7 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                           child: Icon(
                             Icons.check_circle,
                             color: (gender == "male")
-                                ? Color(0xff517DF6)
+                                ? const Color(0xff517DF6)
                                 : Colors.white,
                           ),
                         ),
@@ -127,8 +128,9 @@ class _BmiDataScreenState extends State<BmiDataScreen> {
                     setState(() {});
                   },
                   child: BmiCard(
-                    borderColor:
-                        (gender == "female") ? Color(0xff517DF6) : Colors.white,
+                    borderColor: (gender == "female")
+                        ? const Color(0xff517DF6)
+                        : Colors.white,
                     child: Stack(
                       children: [
                         const Center(
